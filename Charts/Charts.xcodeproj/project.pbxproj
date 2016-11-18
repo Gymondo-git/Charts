@@ -1061,10 +1061,11 @@
 				TargetAttributes = {
 					06AEE7A11BDC3F8B009875AE = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0810;
 					};
 					5BA8EC3F1A9D14DC00CE82E1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					65B3F5BE1C7370BE000983D0 = {
 						CreatedOnToolsVersion = 7.2.1;
