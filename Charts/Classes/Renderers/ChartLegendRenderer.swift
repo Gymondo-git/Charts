@@ -210,9 +210,11 @@ open class ChartLegendRenderer: ChartRendererBase
             // So here we offset the vertical ones only.
             if orientation == .vertical
             {
-                originPosX += (direction == .leftToRight
-                    ? -legend.neededWidth / 2.0 + xoffset
-                    : legend.neededWidth / 2.0 - xoffset)
+              if direction == .leftToRight {
+                originPosX += -legend.neededWidth / 2.0 + xoffset
+              } else {
+                originPosX += legend.neededWidth / 2.0 - xoffset
+              }
             }
         }
         

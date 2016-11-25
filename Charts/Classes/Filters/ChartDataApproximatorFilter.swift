@@ -180,10 +180,13 @@ open class ChartDataApproximatorFilter: ChartDataBaseFilter
             * (xDiffEndStart)
             + (endEntry.value - startEntry.value)
             * (endEntry.value - startEntry.value))
-        
+      
+        let a = (endEntry.value - startEntry.value)
+        let b = (entryPoint.value - startEntry.value)
+      
         return Double(fabs((xDiffEntryStart)
-            * (endEntry.value - startEntry.value)
-            - (entryPoint.value - startEntry.value)
+            * a
+            - b
             * (xDiffEndStart))) / Double(normalLength)
     }
     

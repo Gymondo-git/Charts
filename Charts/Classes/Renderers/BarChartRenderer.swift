@@ -557,7 +557,9 @@ open class BarChartRenderer: ChartDataRendererBase
             context.saveGState()
             
             let pixelToValueMatrix = trans.pixelToValueMatrix
-            let xToYRel = abs(sqrt(pixelToValueMatrix.b * pixelToValueMatrix.b + pixelToValueMatrix.d * pixelToValueMatrix.d) / sqrt(pixelToValueMatrix.a * pixelToValueMatrix.a + pixelToValueMatrix.c * pixelToValueMatrix.c))
+            let x = sqrt(pixelToValueMatrix.b * pixelToValueMatrix.b + pixelToValueMatrix.d * pixelToValueMatrix.d)
+            let y = sqrt(pixelToValueMatrix.a * pixelToValueMatrix.a + pixelToValueMatrix.c * pixelToValueMatrix.c)
+            let xToYRel = abs(x / y)
             
             let arrowWidth = set.barSpace / 2.0
             let arrowHeight = arrowWidth * xToYRel
