@@ -333,7 +333,7 @@ open class ScatterChartRenderer: LineScatterCandleRadarChartRenderer
               x: pt.x,
               y: pt.y - shapeSize - lineHeight),
             align: .center,
-            attributes: [NSFontAttributeName: valueFont, NSForegroundColorAttributeName: dataSet.valueTextColorAt(j)]
+            attributes: [NSAttributedStringKey.font: valueFont, NSAttributedStringKey.foregroundColor: dataSet.valueTextColorAt(j)]
           )
         }
       }

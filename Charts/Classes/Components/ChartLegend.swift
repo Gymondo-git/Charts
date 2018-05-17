@@ -246,7 +246,7 @@ open class ChartLegend: ChartComponentBase
                 continue
             }
             
-            let size = (labels[i]! as NSString).size(attributes: [NSFontAttributeName: font])
+            let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
             
             if (size.width > maxW)
             {
@@ -337,7 +337,7 @@ open class ChartLegend: ChartComponentBase
                 
                 if labels[i] != nil
                 {
-                    let size = (labels[i]! as NSString).size(attributes: [NSFontAttributeName: labelFont])
+                    let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedStringKey.font: labelFont])
                     
                     if drawingForm && !wasStacked
                     {
@@ -405,7 +405,7 @@ open class ChartLegend: ChartComponentBase
             
             // Start calculating layout
             
-            let labelAttrs = [NSFontAttributeName: labelFont]
+            let labelAttrs = [NSAttributedStringKey.font: labelFont]
             var maxLineWidth: CGFloat = 0.0
             var currentLineWidth: CGFloat = 0.0
             var requiredWidth: CGFloat = 0.0
@@ -431,7 +431,7 @@ open class ChartLegend: ChartComponentBase
                 // grouped forms have null labels
                 if (labels[i] != nil)
                 {
-                    calculatedLabelSizes[i] = (labels[i]! as NSString).size(attributes: labelAttrs)
+                    calculatedLabelSizes[i] = (labels[i]! as NSString).size(withAttributes: labelAttrs)
                     requiredWidth += drawingForm ? formToTextSpace + formSize : 0.0
                     requiredWidth += calculatedLabelSizes[i].width
                 }

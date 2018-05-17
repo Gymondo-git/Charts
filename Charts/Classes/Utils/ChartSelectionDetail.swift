@@ -53,7 +53,7 @@ open class ChartSelectionDetail: NSObject
         return _y
     }
     
-    open var value: Double
+    @objc open var value: Double
     {
         return _value
     }
@@ -63,12 +63,12 @@ open class ChartSelectionDetail: NSObject
         return _dataIndex
     }
     
-    open var dataSetIndex: Int
+    @objc open var dataSetIndex: Int
     {
         return _dataSetIndex
     }
     
-    open var dataSet: IChartDataSet?
+    @objc open var dataSet: IChartDataSet?
     {
         return _dataSet
     }

@@ -298,7 +298,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
       pt.x = fixedPosition
       pt.y += offset
       
-      ChartUtils.drawText(context: context, text: text, point: pt, align: textAlign, attributes: [NSFontAttributeName: labelFont, NSForegroundColorAttributeName: labelTextColor])
+      ChartUtils.drawText(context: context, text: text, point: pt, align: textAlign, attributes: [NSAttributedStringKey.font: labelFont, NSAttributedStringKey.foregroundColor: labelTextColor])
     }
   }
   
@@ -470,7 +470,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
                                 x: viewPortHandler.contentRight - xOffset,
                                 y: position.y - yOffset),
                               align: .right,
-                              attributes: [NSFontAttributeName: l.valueFont, NSForegroundColorAttributeName: l.valueTextColor])
+                              attributes: [NSAttributedStringKey.font: l.valueFont, NSAttributedStringKey.foregroundColor: l.valueTextColor])
         }
         else if (l.labelPosition == .rightBottom)
         {
@@ -480,7 +480,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
                                 x: viewPortHandler.contentRight - xOffset,
                                 y: position.y + yOffset - labelLineHeight),
                               align: .right,
-                              attributes: [NSFontAttributeName: l.valueFont, NSForegroundColorAttributeName: l.valueTextColor])
+                              attributes: [NSAttributedStringKey.font: l.valueFont, NSAttributedStringKey.foregroundColor: l.valueTextColor])
         }
         else if (l.labelPosition == .leftTop)
         {
@@ -490,7 +490,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
                                 x: viewPortHandler.contentLeft + xOffset,
                                 y: position.y - yOffset),
                               align: .left,
-                              attributes: [NSFontAttributeName: l.valueFont, NSForegroundColorAttributeName: l.valueTextColor])
+                              attributes: [NSAttributedStringKey.font: l.valueFont, NSAttributedStringKey.foregroundColor: l.valueTextColor])
         }
         else
         {
@@ -500,7 +500,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
                                 x: viewPortHandler.contentLeft + xOffset,
                                 y: position.y + yOffset - labelLineHeight),
                               align: .left,
-                              attributes: [NSFontAttributeName: l.valueFont, NSForegroundColorAttributeName: l.valueTextColor])
+                              attributes: [NSAttributedStringKey.font: l.valueFont, NSAttributedStringKey.foregroundColor: l.valueTextColor])
         }
       }
     }

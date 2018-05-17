@@ -370,7 +370,7 @@ open class ChartLegendRenderer: ChartRendererBase
                     
                     if (direction == .rightToLeft)
                     {
-                        posX -= (labels[i]! as NSString).size(attributes: [NSFontAttributeName: labelFont]).width
+                        posX -= (labels[i]! as NSString).size(withAttributes: [NSAttributedStringKey.font: labelFont]).width
                     }
                     
                     if (!wasStacked)
@@ -435,6 +435,6 @@ open class ChartLegendRenderer: ChartRendererBase
     /// Draws the provided label at the given position.
     open func drawLabel(context: CGContext, x: CGFloat, y: CGFloat, label: String, font: NSUIFont, textColor: NSUIColor)
     {
-        ChartUtils.drawText(context: context, text: label, point: CGPoint(x: x, y: y), align: .left, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: textColor])
+        ChartUtils.drawText(context: context, text: label, point: CGPoint(x: x, y: y), align: .left, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: textColor])
     }
 }

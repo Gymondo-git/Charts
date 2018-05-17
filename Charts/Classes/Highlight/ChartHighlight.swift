@@ -104,11 +104,11 @@ open class ChartHighlight: NSObject
         self.init(xIndex: x, value: Double.nan, dataSetIndex: dataSetIndex, stackIndex: -1, range: nil)
     }
     
-    open var xIndex: Int { return _xIndex }
-    open var value: Double { return _value }
-    open var dataIndex: Int { return _dataIndex }
-    open var dataSetIndex: Int { return _dataSetIndex }
-    open var stackIndex: Int { return _stackIndex }
+    @objc open var xIndex: Int { return _xIndex }
+    @objc open var value: Double { return _value }
+    @objc open var dataIndex: Int { return _dataIndex }
+    @objc open var dataSetIndex: Int { return _dataSetIndex }
+    @objc open var stackIndex: Int { return _stackIndex }
     
     /// - returns: the range of values the selected value of a stacked bar is in. (this is only relevant for stacked-barchart)
     open var range: ChartRange? { return _range }

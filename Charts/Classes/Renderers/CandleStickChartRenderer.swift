@@ -311,7 +311,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarChartRenderer
               x: pt.x,
               y: pt.y - yOffset),
             align: .center,
-            attributes: [NSFontAttributeName: valueFont, NSForegroundColorAttributeName: dataSet.valueTextColorAt(j)])
+            attributes: [NSAttributedStringKey.font: valueFont, NSAttributedStringKey.foregroundColor: dataSet.valueTextColorAt(j)])
         }
       }
     }
