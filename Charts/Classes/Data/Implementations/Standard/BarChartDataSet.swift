@@ -105,8 +105,8 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
         _lastStart = start
         _lastEnd = endValue
         
-        _yMin = DBL_MAX
-        _yMax = -DBL_MAX
+        _yMin = .greatestFiniteMagnitude
+        _yMax = -.greatestFiniteMagnitude
         
         for i in stride(from: start, through: endValue, by: 1)
         {
@@ -142,7 +142,7 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
             }
         }
         
-        if (_yMin == DBL_MAX)
+        if (_yMin == .greatestFiniteMagnitude)
         {
             _yMin = 0.0
             _yMax = 0.0

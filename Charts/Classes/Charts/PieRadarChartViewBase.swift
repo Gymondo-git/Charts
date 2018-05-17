@@ -580,7 +580,7 @@ open class PieRadarChartViewBase: ChartViewBase
             
             if (!rotationWithTwoFingers)
             {
-                let touch = touches.first as NSUITouch!
+                let touch = touches.first as NSUITouch?
                 
                 let touchLocation = touch?.location(in: self)
                 
@@ -598,7 +598,7 @@ open class PieRadarChartViewBase: ChartViewBase
     {
         if (rotationEnabled && !rotationWithTwoFingers)
         {
-            let touch = touches.first as NSUITouch!
+          let touch = touches.first as NSUITouch?
             
             let touchLocation = touch?.location(in: self)
             
@@ -620,7 +620,7 @@ open class PieRadarChartViewBase: ChartViewBase
         
         if (rotationEnabled && !rotationWithTwoFingers)
         {
-            let touch = touches.first as NSUITouch!
+            let touch = touches.first as NSUITouch?
             
             let touchLocation = touch?.location(in: self)
             

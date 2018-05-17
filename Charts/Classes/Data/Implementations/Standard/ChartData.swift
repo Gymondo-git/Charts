@@ -108,7 +108,7 @@ open class ChartData: NSObject
     
     for i in 0 ..< _xVals.count
     {
-      sum += _xVals[i] == nil ? 0 : (_xVals[i]!).characters.count
+      sum += _xVals[i] == nil ? 0 : (_xVals[i]!).count
     }
     
     _xValAverageLength = Double(sum) / Double(_xVals.count)
@@ -159,8 +159,8 @@ open class ChartData: NSObject
       _lastStart = start
       _lastEnd = end
       
-      _yMin = DBL_MAX
-      _yMax = -DBL_MAX
+      _yMin = .greatestFiniteMagnitude
+      _yMax = -.greatestFiniteMagnitude
       
       for i in 0 ..< _dataSets.count
       {
@@ -177,7 +177,7 @@ open class ChartData: NSObject
         }
       }
       
-      if (_yMin == DBL_MAX)
+      if (_yMin == .greatestFiniteMagnitude)
       {
         _yMin = 0.0
         _yMax = 0.0

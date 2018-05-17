@@ -723,7 +723,7 @@ open class LineChartRenderer: LineRadarChartRenderer
           context.addEllipse(in: rect)
           
           // Cut hole in path
-          context.addArc(center: pt, radius: circleHoleRadius, startAngle: 0.0, endAngle: CGFloat(M_PI_2), clockwise: true)
+          context.addArc(center: pt, radius: circleHoleRadius, startAngle: 0.0, endAngle: CGFloat.pi / 2, clockwise: true)
           
           // Fill in-between
           context.fillPath()
