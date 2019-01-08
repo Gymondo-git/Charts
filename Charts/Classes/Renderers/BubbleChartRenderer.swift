@@ -215,7 +215,7 @@ open class BubbleChartRenderer: ChartDataRendererBase
               x: pt.x,
               y: pt.y - (0.5 * lineHeight)),
             align: .center,
-            attributes: [NSAttributedStringKey.font: valueFont, NSAttributedStringKey.foregroundColor: valueTextColor])
+            attributes: [NSAttributedString.Key.font: valueFont, NSAttributedString.Key.foregroundColor: valueTextColor])
         }
       }
     }

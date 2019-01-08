@@ -246,7 +246,7 @@ open class ChartLegend: ChartComponentBase
                 continue
             }
             
-            let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
+            let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedString.Key.font: font])
             
             if (size.width > maxW)
             {
@@ -337,7 +337,7 @@ open class ChartLegend: ChartComponentBase
                 
                 if labels[i] != nil
                 {
-                    let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedStringKey.font: labelFont])
+                    let size = (labels[i]! as NSString).size(withAttributes: [NSAttributedString.Key.font: labelFont])
                     
                     if drawingForm && !wasStacked
                     {
@@ -405,7 +405,7 @@ open class ChartLegend: ChartComponentBase
             
             // Start calculating layout
             
-            let labelAttrs = [NSAttributedStringKey.font: labelFont]
+            let labelAttrs = [NSAttributedString.Key.font: labelFont]
             var maxLineWidth: CGFloat = 0.0
             var currentLineWidth: CGFloat = 0.0
             var requiredWidth: CGFloat = 0.0

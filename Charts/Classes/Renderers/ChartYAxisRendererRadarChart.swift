@@ -188,7 +188,7 @@ open class ChartYAxisRendererRadarChart: ChartYAxisRenderer
       
       let label = yAxis.getFormattedLabel(j)
       
-      ChartUtils.drawText(context: context, text: label, point: CGPoint(x: p.x + 10.0, y: p.y - labelLineHeight), align: .left, attributes: [NSAttributedStringKey.font: labelFont, NSAttributedStringKey.foregroundColor: labelTextColor])
+      ChartUtils.drawText(context: context, text: label, point: CGPoint(x: p.x + 10.0, y: p.y - labelLineHeight), align: .left, attributes: [NSAttributedString.Key.font: labelFont, NSAttributedString.Key.foregroundColor: labelTextColor])
     }
   }
   

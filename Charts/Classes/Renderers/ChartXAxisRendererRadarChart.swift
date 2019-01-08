@@ -68,11 +68,11 @@ open class ChartXAxisRendererRadarChart: ChartXAxisRenderer
             
             let p = ChartUtils.getPosition(center: center, dist: CGFloat(chart.yRange) * factor + xAxis.labelRotatedWidth / 2.0, angle: angle)
             
-            drawLabel(context: context, label: label!, xIndex: i, x: p.x, y: p.y - xAxis.labelRotatedHeight / 2.0, attributes: [NSAttributedStringKey.font: labelFont, NSAttributedStringKey.foregroundColor: labelTextColor], anchor: drawLabelAnchor, angleRadians: labelRotationAngleRadians)
+            drawLabel(context: context, label: label!, xIndex: i, x: p.x, y: p.y - xAxis.labelRotatedHeight / 2.0, attributes: [NSAttributedString.Key.font: labelFont, NSAttributedString.Key.foregroundColor: labelTextColor], anchor: drawLabelAnchor, angleRadians: labelRotationAngleRadians)
         }
     }
     
-    open func drawLabel(context: CGContext, label: String, xIndex: Int, x: CGFloat, y: CGFloat, attributes: [NSAttributedStringKey: Any], anchor: CGPoint, angleRadians: CGFloat)
+    open func drawLabel(context: CGContext, label: String, xIndex: Int, x: CGFloat, y: CGFloat, attributes: [NSAttributedString.Key: Any], anchor: CGPoint, angleRadians: CGFloat)
     {
         guard let xAxis = xAxis else { return }
         

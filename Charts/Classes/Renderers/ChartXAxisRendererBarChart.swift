@@ -41,9 +41,9 @@ open class ChartXAxisRendererBarChart: ChartXAxisRenderer
     let paraStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
     paraStyle.alignment = .center
     
-    let labelAttrs: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font: xAxis.labelFont,
-                      NSAttributedStringKey.foregroundColor: xAxis.labelTextColor,
-                      NSAttributedStringKey.paragraphStyle: paraStyle]
+    let labelAttrs: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: xAxis.labelFont,
+                      NSAttributedString.Key.foregroundColor: xAxis.labelTextColor,
+                      NSAttributedString.Key.paragraphStyle: paraStyle]
     let labelRotationAngleRadians = xAxis.labelRotationAngle * ChartUtils.Math.FDEG2RAD
     
     let step = barData.dataSetCount

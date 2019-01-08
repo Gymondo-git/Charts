@@ -48,7 +48,7 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     
     /// Calculates the total number of entries this DataSet represents, including
     /// stacks. All values belonging to a stack are calculated separately.
-    fileprivate func calcEntryCountIncludingStacks(_ yVals: [BarChartDataEntry]!)
+    fileprivate func calcEntryCountIncludingStacks(_ yVals: [BarChartDataEntry] = [])
     {
         _entryCountStacks = 0
         
@@ -68,7 +68,7 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     }
     
     /// calculates the maximum stacksize that occurs in the Entries array of this DataSet
-    fileprivate func calcStackSize(_ yVals: [BarChartDataEntry]!)
+    fileprivate func calcStackSize(_ yVals: [BarChartDataEntry] = [])
     {
         for i in 0 ..< yVals.count
         {

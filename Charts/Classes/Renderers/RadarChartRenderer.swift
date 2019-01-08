@@ -196,8 +196,8 @@ open class RadarChartRenderer: LineRadarChartRenderer
           text: formatter.string(from: NSNumber(value: e.value))!,
           point: CGPoint(x: p.x, y: p.y - yoffset - valueFont.lineHeight),
           align: .center,
-          attributes: [NSAttributedStringKey.font: valueFont,
-                       NSAttributedStringKey.foregroundColor: dataSet.valueTextColorAt(j)]
+          attributes: [NSAttributedString.Key.font: valueFont,
+                       NSAttributedString.Key.foregroundColor: dataSet.valueTextColorAt(j)]
         )
       }
     }
