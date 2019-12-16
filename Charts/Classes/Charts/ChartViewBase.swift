@@ -943,7 +943,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, ChartAnimatorDelegate
   
   open func removeViewportJob(_ job: ChartViewPortJob)
   {
-    if let index = _viewportJobs.index(where: { $0 === job })
+    if let index = _viewportJobs.firstIndex(where: { $0 === job })
     {
       _viewportJobs.remove(at: index)
     }
