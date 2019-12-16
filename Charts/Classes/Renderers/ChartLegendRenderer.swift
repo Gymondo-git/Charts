@@ -45,15 +45,14 @@ open class ChartLegendRenderer: ChartRendererBase
             for i in 0..<data.dataSetCount
             {
                 let dataSet = data.getDataSetByIndex(i)!
-                
-                var clrs: [NSUIColor] = dataSet.colors
+                let clrs: [NSUIColor] = dataSet.colors
                 let entryCount = dataSet.entryCount
                 
                 // if we have a barchart with stacked bars
                 if (dataSet is IBarChartDataSet && (dataSet as! IBarChartDataSet).isStacked)
                 {
                     let bds = dataSet as! IBarChartDataSet
-                    var sLabels = bds.stackLabels
+                    let sLabels = bds.stackLabels
                     
                     for j in 0..<min(clrs.count, bds.stackSize)
                     {
@@ -70,7 +69,7 @@ open class ChartLegendRenderer: ChartRendererBase
                 }
                 else if (dataSet is IPieChartDataSet)
                 {
-                    var xVals = data.xVals
+                    let xVals = data.xVals
                     let pds = dataSet as! IPieChartDataSet
                     
                     for j in 0..<min(clrs.count, entryCount, xVals.count)
@@ -135,23 +134,17 @@ open class ChartLegendRenderer: ChartRendererBase
         let labelTextColor = legend.textColor
         let labelLineHeight = labelFont.lineHeight
         let formYOffset = labelLineHeight / 2.0
-
-        var labels = legend.labels
-        var colors = legend.colors
-        
+        let labels = legend.labels
+        let colors = legend.colors
         let formSize = legend.formSize
         let formToTextSpace = legend.formToTextSpace
         let xEntrySpace = legend.xEntrySpace
         let yEntrySpace = legend.yEntrySpace
-        
         let orientation = legend.orientation
         let horizontalAlignment = legend.horizontalAlignment
         let verticalAlignment = legend.verticalAlignment
         let direction = legend.direction
-
-        // space between the entries
         let stackSpace = legend.stackSpace
-
         let yoffset = legend.yOffset
         let xoffset = legend.xOffset
         var originPosX: CGFloat = 0.0
@@ -222,9 +215,9 @@ open class ChartLegendRenderer: ChartRendererBase
         {
         case .horizontal:
             
-            var calculatedLineSizes = legend.calculatedLineSizes
-            var calculatedLabelSizes = legend.calculatedLabelSizes
-            var calculatedLabelBreakPoints = legend.calculatedLabelBreakPoints
+            let calculatedLineSizes = legend.calculatedLineSizes
+            let calculatedLabelSizes = legend.calculatedLabelSizes
+            let calculatedLabelBreakPoints = legend.calculatedLabelBreakPoints
             
             var posX: CGFloat = originPosX
             var posY: CGFloat

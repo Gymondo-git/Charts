@@ -30,7 +30,7 @@ open class CombinedHighlighter: ChartHighlighter
       else { return vals }
     
     // get all chartdata objects
-    var dataObjects = data.allData
+    let dataObjects = data.allData
     
     for i in 0 ..< dataObjects.count
     {

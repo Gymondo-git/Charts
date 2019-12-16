@@ -23,7 +23,7 @@ import CoreGraphics
 open class ChartLegend: ChartComponentBase
 {
     /// This property is deprecated - Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.
-    @available(*, deprecated: 1.0, message: "Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.")
+    @available(*, deprecated, message: "Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.")
     @objc(ChartLegendPosition)
     public enum Position: Int
     {
@@ -101,7 +101,7 @@ open class ChartLegend: ChartComponentBase
     fileprivate var _isLegendCustom = false
     
     /// This property is deprecated - Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.
-    @available(*, deprecated: 1.0, message: "Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.")
+    @available(*, deprecated, message: "Use `position`, `horizontalAlignment`, `verticalAlignment`, `orientation`, `drawInside`, `direction`.")
     open var position: Position
     {
         get
@@ -237,8 +237,8 @@ open class ChartLegend: ChartComponentBase
     {
         var maxW = CGFloat(0.0)
         var maxH = CGFloat(0.0)
-        
-        var labels = self.labels
+        let labels = self.labels
+
         for i in 0 ..< labels.count
         {
             if (labels[i] == nil)
@@ -270,7 +270,7 @@ open class ChartLegend: ChartComponentBase
     }
     
     /// This function is deprecated - Please read `neededWidth`/`neededHeight` after `calculateDimensions` was called.
-    @available(*, deprecated: 1.0, message: "Please read `neededWidth`/`neededHeight` after `calculateDimensions` was called.")
+    @available(*, deprecated, message: "Please read `neededWidth`/`neededHeight` after `calculateDimensions` was called.")
     open func getFullSize(_ labelFont: NSUIFont) -> CGSize
     {
         return CGSize(width: neededWidth, height: neededHeight)
@@ -307,13 +307,11 @@ open class ChartLegend: ChartComponentBase
         switch orientation
         {
         case .vertical:
-            
             var maxWidth = CGFloat(0.0)
             var width = CGFloat(0.0)
             var maxHeight = CGFloat(0.0)
             let labelLineHeight = labelFont.lineHeight
-            
-            var labels = self.labels
+            let labels = self.labels
             let count = labels.count
             var wasStacked = false
             
@@ -376,18 +374,15 @@ open class ChartLegend: ChartComponentBase
             neededHeight = maxHeight
             
         case .horizontal:
-            
-            var labels = self.labels
-            var colors = self.colors
+            let labels = self.labels
+            let colors = self.colors
             let labelCount = labels.count
-            
             let labelLineHeight = labelFont.lineHeight
             let formSize = self.formSize
             let formToTextSpace = self.formToTextSpace
             let xEntrySpace = self.xEntrySpace
             let stackSpace = self.stackSpace
             let wordWrapEnabled = self.wordWrapEnabled
-            
             let contentWidth: CGFloat = viewPortHandler.contentWidth * maxSizePercent
             
             // Prepare arrays for calculated layout

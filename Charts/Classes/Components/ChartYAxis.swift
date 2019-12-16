@@ -56,7 +56,7 @@ open class ChartYAxis: ChartAxisBase
     open var inverted = false
     
     /// This property is deprecated - Use `axisMinValue` instead.
-    @available(*, deprecated: 1.0, message: "Use axisMinValue instead.")
+  @available(*, deprecated, message: "Use axisMinValue instead.")
     open var startAtZeroEnabled: Bool
     {
         get
@@ -273,7 +273,7 @@ open class ChartYAxis: ChartAxisBase
     open var isInverted: Bool { return inverted; }
     
     /// This is deprecated now, use `axisMinValue`
-    @available(*, deprecated: 1.0, message: "Use axisMinValue instead.")
+  @available(*, deprecated, message: "Use axisMinValue instead.")
     open var isStartAtZeroEnabled: Bool { return startAtZeroEnabled }
 
     /// - returns: true if focing the y-label count is enabled. Default: false
