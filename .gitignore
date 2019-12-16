@@ -32,3 +32,4 @@ project.xcworkspace
 Carthage
 Charts.framework.zip
 ChartsRealm.framework.zip
+/.swiftpm

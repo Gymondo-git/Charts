@@ -255,8 +255,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarChartRenderer
     // if values are drawn
     if (candleData.yValCount < Int(ceil(CGFloat(dataProvider.maxVisibleValueCount) * viewPortHandler.scaleX)))
     {
-      var dataSets = candleData.dataSets
-      
+      let dataSets = candleData.dataSets
       let phaseX = max(0.0, min(1.0, animator.phaseX))
       let phaseY = animator.phaseY
       

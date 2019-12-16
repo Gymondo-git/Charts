@@ -86,7 +86,7 @@ open class BarChartRenderer: ChartDataRendererBase
       // calculate the x-position, depending on datasetcount
       let x = CGFloat(e.xIndex + e.xIndex * dataSetOffset) + CGFloat(index)
         + groupSpace * CGFloat(e.xIndex) + groupSpaceHalf
-      var vals = e.values
+      let vals = e.values
       
       if (!containsStacks || vals == nil)
       {
@@ -290,7 +290,7 @@ open class BarChartRenderer: ChartDataRendererBase
         let animator = animator
         else { return }
       
-      var dataSets = barData.dataSets
+      let dataSets = barData.dataSets
       
       let drawValueAboveBar = dataProvider.isDrawValueAboveBarEnabled
       

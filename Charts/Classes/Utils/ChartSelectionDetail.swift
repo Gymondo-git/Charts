@@ -12,7 +12,7 @@
 //  https://github.com/danielgindi/Charts
 //
 
-import Foundation
+import UIKit
 
 open class ChartSelectionDetail: NSObject
 {

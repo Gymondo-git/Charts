@@ -267,12 +267,9 @@ open class HorizontalBarChartRenderer: BarChartRenderer
         let animator = animator
         else { return }
       
-      var dataSets = barData.dataSets
-      
+      let dataSets = barData.dataSets
       let drawValueAboveBar = dataProvider.isDrawValueAboveBarEnabled
-      
       let textAlign = NSTextAlignment.left
-      
       let valueOffsetPlus: CGFloat = 5.0
       var posOffset: CGFloat
       var negOffset: CGFloat

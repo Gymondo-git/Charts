@@ -180,9 +180,7 @@ open class PieChartView: PieRadarChartViewBase
         _absoluteAngles.reserveCapacity(data.yValCount)
         
         let yValueSum = (_data as! PieChartData).yValueSum
-        
-        var dataSets = data.dataSets
-
+        let dataSets = data.dataSets
         var cnt = 0
 
         for i in 0 ..< data.dataSetCount
@@ -268,7 +266,7 @@ open class PieChartView: PieRadarChartViewBase
     /// - returns: the index of the DataSet this x-index belongs to.
     open func dataSetIndexForIndex(_ xIndex: Int) -> Int
     {
-        var dataSets = _data?.dataSets ?? []
+        let dataSets = _data?.dataSets ?? []
         
         for i in 0 ..< dataSets.count
         {
