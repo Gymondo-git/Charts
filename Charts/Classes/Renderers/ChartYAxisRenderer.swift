@@ -408,7 +408,7 @@ open class ChartYAxisRenderer: ChartAxisRendererBase
   {
     guard let yAxis = yAxis else { return }
     
-    var limitLines = yAxis.limitLines
+    let limitLines = yAxis.limitLines
     
     if (limitLines.count == 0)
     {

@@ -342,14 +342,14 @@ open class ChartViewBase: NSUIView, ChartDataProvider, ChartAnimatorDelegate
           text: noDataText,
           point: CGPoint(x: frame.width / 2.0, y: y),
           align: .center,
-          attributes: [NSAttributedString.Key.font: infoFont, NSAttributedString.Key.foregroundColor: infoTextColor]
+          attributes: [.font: infoFont!, .foregroundColor: infoTextColor!]
         )
         y = y + infoFont.lineHeight
       }
       
       if (noDataTextDescription != nil && (noDataTextDescription!).count > 0)
       {
-        ChartUtils.drawText(context: context, text: noDataTextDescription!, point: CGPoint(x: frame.width / 2.0, y: y), align: .center, attributes: [NSAttributedString.Key.font: infoFont, NSAttributedString.Key.foregroundColor: infoTextColor])
+        ChartUtils.drawText(context: context, text: noDataTextDescription!, point: CGPoint(x: frame.width / 2.0, y: y), align: .center, attributes: [.font: infoFont!, .foregroundColor: infoTextColor!])
       }
       
       return

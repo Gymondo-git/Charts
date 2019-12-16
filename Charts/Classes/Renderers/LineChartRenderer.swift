@@ -550,8 +550,7 @@ open class LineChartRenderer: LineRadarChartRenderer
     
     if (CGFloat(lineData.yValCount) < CGFloat(dataProvider.maxVisibleValueCount) * viewPortHandler.scaleX)
     {
-      var dataSets = lineData.dataSets
-      
+      let dataSets = lineData.dataSets
       let phaseX = max(0.0, min(1.0, animator.phaseX))
       let phaseY = animator.phaseY
       

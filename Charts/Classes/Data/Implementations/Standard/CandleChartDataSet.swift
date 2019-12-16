@@ -39,8 +39,7 @@ open class CandleChartDataSet: LineScatterCandleRadarChartDataSet, ICandleChartD
             return
         }
         
-        var entries = yVals as! [CandleChartDataEntry]
-        
+        let entries = yVals as! [CandleChartDataEntry]
         var endValue : Int
         
         if end == 0 || end >= yValCount

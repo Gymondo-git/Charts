@@ -276,7 +276,7 @@ open class ChartXAxisRenderer: ChartAxisRendererBase
   {
     guard let xAxis = xAxis else { return }
     
-    var limitLines = xAxis.limitLines
+    let limitLines = xAxis.limitLines
     
     if (limitLines.count == 0)
     {
